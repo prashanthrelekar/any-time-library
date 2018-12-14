@@ -1,0 +1,28 @@
+<p>
+  book-detail works!
+</p>
+
+<div>
+<strong>ISBN</strong>
+<P>{{ bookDetail?.isbn }}</P>
+<strong>Title</strong>
+<P>{{ bookDetail?.title }}</P>
+<strong>Author</strong>
+<P>{{ bookDetail?.author }}</P>
+<strong>Description</strong>
+<P>{{ bookDetail?.description }}</P>
+<strong>Thumbnail</strong>
+<div>
+<img src="{{ bookDetail?.imageUrl }}">
+</div>
+<strong>Category</strong>
+<P>{{ bookDetail?.category }}</P>
+<strong>Rating</strong>
+<P>{{ bookDetail?.rating }}</P>
+<strong>Quantity</strong>
+<P>{{ bookDetail?.quantity }}</P>
+</div>
+<a routerLink="/admin/book/edit/{{ bookDetail?.id }}" class="btn btn-primary">Edit</a>
+&nbsp;
+<button type="button" class="btn btn-primary" (click)="onBookDelete(bookDetail?.id)">Delete</button>
+
